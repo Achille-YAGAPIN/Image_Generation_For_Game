@@ -14,7 +14,7 @@ pipe.enable_attention_slicing()
 
 # ---- Chargement du LoRA ----
 # Option 1 : LoRA venant de HuggingFace Hub
-pipe.load_lora_weights("latent-consistency/lcm-lora-sdxl", weight_name="pytorch_lora_weights.safetensors")
+pipe.load_lora_weights("ByteDance/Hyper-SD", weight_name="Hyper-FLUX.1-dev-8steps-lora.safetensors")
 
 # Option 2 : LoRA local
 # pipe.load_lora_weights("./mon_lora", weight_name="lora.safetensors")
@@ -26,5 +26,5 @@ prompt = "A dragon-dog hybrid spitting computers"
 
 image = pipe(prompt, guidance_scale=7.5).images[0]
 
-image.save("ma_premiere_image.png")
+image.save("ma_deuxieme_image.png")
 
