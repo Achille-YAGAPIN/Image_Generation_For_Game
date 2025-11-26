@@ -44,5 +44,5 @@ generated_image = pipe(
 ).images[0]
 
 # 5. Sauvegarder ou afficher l'image résultante
-generated_image.save("image_generee_img2img.png")
+generated_image.save("results/image_generee_img2img.png")
 print("Image générée et sauvegardée sous 'image_generee_img2img.png'")
