@@ -31,7 +31,7 @@ print("Image chargée")
 init_image = init_image.resize((768, 512)) # Exemple de redimensionnement
 
 # 3. Définir le prompt
-prompt = "Un château médiéval fantastique, sous un ciel orageux, style peinture à l'huile dramatique"
+prompt = "Tête de coq"
 
 # 4. Générer l'image modifiée
 # denoising_strength : 0.0 (pas de changement) à 1.0 (régénération complète)
