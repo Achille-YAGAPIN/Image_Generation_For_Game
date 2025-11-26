@@ -15,9 +15,16 @@ pipe = pipe.to(device)
 # Remplacez 'votre_image_entree.jpg' par le chemin de votre image
 try:
     init_image = Image.open("Entree.jpg").convert("RGB")
-    print(init_image)
+except FileNotFoundError:
+    print("Erreur: Le fichier 'votre_image_entree.jpg' n'a pas été trouvé.")
+    # Créez une image simple si le fichier n'existe pas pour que l'exemple puisse toujours s'exécuter
+    print("Création d'une image de démonstration.")
+    init_image = Image.new('RGB', (768, 512), color = 'red')
+    from PIL import ImageDraw
+    d = ImageDraw.Draw(init_image)
+    d.text((100,200), "Hello Img2Img", fill=(0,0,0))
 
-
+print("Image chargée")
 # Vous pouvez redimensionner l'image si nécessaire,
 # mais Stable Diffusion fonctionne généralement bien avec des résolutions 512x512 ou 768x512, 1024x1024 etc.
 # Si votre image est trop grande, cela consommera beaucoup de VRAM.
