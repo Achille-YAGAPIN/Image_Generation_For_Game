@@ -42,7 +42,7 @@ def process_image(input_path: str, output_path: str):
         processed_img = processed_img.resize(TARGET_SIZE, Image.Resampling.LANCZOS)
         
         # 4. Sauvegarder l'image traitée dans le dossier /data/images
-        processed_img.save(output_path, 'JPEG')
+        processed_img.save(output_path, 'JPEG',quality=95)
         
         return True
 
