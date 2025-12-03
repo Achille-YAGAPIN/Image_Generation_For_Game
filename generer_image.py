@@ -15,16 +15,16 @@ pipe.enable_attention_slicing()
 # ---- Chargement du LoRA ----
 # Option 1 : LoRA venant de HuggingFace Hub
 pipe.load_lora_weights("ByteDance/Hyper-SD", weight_name="Hyper-SDXL-2steps-lora.safetensors")
-pipe.load_lora_weights(".", weight_name="minecraft.safetensors")
+pipe.load_lora_weights("goofyai/Leonardo_Ai_Style_Illustration")
 
 # Ajuster l’influence du LoRA
 pipe.unet_lora_scales = {
     "Hyper-SD": 0.8,      # 80% d’effet pour l’UNet
-    "minecraft": 0.5      # 50% d’effet pour l’UNet
+    "Leonardo_Ai_Style_Illustration": 0.5      # 50% d’effet pour l’UNet
 }
 
 
-prompt = "A dragon-dog hybrid spitting computers, pixel art"
+prompt = "A dragon-dog hybrid spitting computers, vector art"
 
 image = pipe(prompt, guidance_scale=7.5).images[0]
 
