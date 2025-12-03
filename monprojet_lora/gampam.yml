@@ -1,0 +1,14 @@
+name: gampam
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - torchvision
+  - pillow
+  - python=3.10
+  - diffusers
+  - pytorch
+  - transformers
+  - accelerate
+prefix: /home/studentgpu/miniconda3/envs/gampam
