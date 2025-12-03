@@ -64,30 +64,29 @@ def run_training():
 
     # Construction de la commande 'accelerate launch'
     command = [
-        "accelerate", "launch", 
-        TRAIN_SCRIPT, # Le chemin corrigé
-        "--pretrained_model_name_or_path", MODEL_NAME,
-        "--instance_data_dir", DATASET_DIR, # Ce dossier contient les images
-        "--caption_column", "prompt", # Nom de la colonne dans le JSON
-        "--output_dir", OUTPUT_DIR,
-        "--resolution", str(RESOLUTION),
-        "--center_crop", "False",
-        "--train_batch_size", str(TRAIN_BATCH_SIZE),
-        "--gradient_accumulation_steps", str(GRADIENT_ACCUMULATION_STEPS),
-        "--learning_rate", str(LEARNING_RATE),
-        "--lr_scheduler", "constant", 
-        "--lr_warmup_steps", "0",
-        "--max_train_steps", str(MAX_TRAIN_STEPS),
-        "--validation_steps", str(SAVE_STEPS),
-        "--save_steps", str(SAVE_STEPS),
-        "--seed", "42",
-        "--mixed_precision", "fp16", # Utilisation du FP16 pour économiser de la VRAM
-        "--lora_rank", str(RANK),
-        "--dataloader_num_workers", "8",
-        "--tokenizer_name", "openai/clip-vit-large-patch14", # Tokenizer pour SD 1.5
-        "--caption_file", CAPTION_FILE, # Le JSON contenant les chemins et les prompts
-        # "--report_to", "wandb", # Optionnel: décommenter si vous utilisez Weights & Biases
-    ]
+    "accelerate", "launch", 
+    TRAIN_SCRIPT,
+    "--pretrained_model_name_or_path", MODEL_NAME,
+    "--train_data_dir", DATASET_DIR, 
+    "--caption_column", "prompt", 
+    "--output_dir", OUTPUT_DIR,
+    "--resolution", str(RESOLUTION),
+    # "--center_crop", # L'absence de l'argument le laisse à False par défaut (RandomCrop)
+    "--train_batch_size", str(TRAIN_BATCH_SIZE),
+    "--gradient_accumulation_steps", str(GRADIENT_ACCUMULATION_STEPS),
+    "--learning_rate", str(LEARNING_RATE),
+    "--lr_scheduler", "constant", 
+    "--lr_warmup_steps", "0",
+    "--max_train_steps", str(MAX_TRAIN_STEPS),
+    "--checkpointing_steps", str(SAVE_STEPS), # Utilisation de l'argument du script text-to-image
+    "--validation_epochs", "1", # Ajout pour s'assurer qu'il y a une validation
+    "--seed", "42",
+    "--mixed_precision", "fp16", 
+    "--rank", str(RANK), # Argument corrigé
+    "--dataloader_num_workers", "8",
+    # --tokenizer_name et --caption_file SONT SUPPRIMÉS car non supportés
+    # "--report_to", "wandb",
+]
 
     try:
         # Exécution de la commande
