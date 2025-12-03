@@ -51,7 +51,7 @@ def load_annotation(caption_file: str):
         return []
 
 def load_item(item: str):
-    relative_path = item.get("image") 
+    relative_path = item.get("file_name") 
     if not relative_path:
         print("Warning: JSON input without key 'image'.Ignored")
         return False
