@@ -8,7 +8,7 @@ ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, '..'))
 
 ASSETS_DIR = os.path.join(ROOT_DIR, 'assets')
 DATA_IMAGES_DIR = os.path.join(ROOT_DIR, 'data', 'images')
-CAPTION_FILE = os.path.join(ROOT_DIR, 'caption.json')
+CAPTION_FILE = os.path.join(ROOT_DIR, 'metadata.jsonl')
 
 TARGET_SIZE = (512, 512)
 BACKGROUND_COLOR = (255, 255, 255) 
@@ -23,52 +23,62 @@ def process_image(input_path: str, output_path: str):
         resize_img = img_background.resize(TARGET_SIZE, Image.Resampling.LANCZOS)
         
         resize_img.save(output_path, 'JPEG',quality=95)
+
         return True
     except Exception as e:
         print(f"Error during image processing {input_path} : {e}")
         return False
 
-def load_annotation(__file__ caption_file):
+import json
+
+def load_annotation(caption_file: str):
     try:
+        annotations = []
         with open(caption_file, 'r') as f:
-            annotations = json.load(f)
-        print(f"Annotations chargées depuis {caption_file}.")
-    except (FileNotFoundError, json.JSONDecodeError) as e :
-        print(f"Erreur lors du chargement de {caption_file} : {e}")
-        return
+            for line in f:
+                line = line.strip()
+                if line:
+                    try:
+                        annotations.append(json.loads(line))
+                    except json.JSONDecodeError as e:
+                        print(f"Error parsing JSON line: {line[:50]}... : {e}")
+        
+        print(f"Annotations loaded from {caption_file}. Total: {len(annotations)} items")
+        return annotations
+    
+    except FileNotFoundError as e:
+        print(f"Error during loading of {caption_file} : {e}")
+        return []
+
+def load_item(item: str):
+    relative_path = item.get("image") 
+    if not relative_path:
+        print("Warning: JSON input without key 'image'.Ignored")
+        return False
+
+    input_file = os.path.join(ASSETS_DIR, relative_path)
+    
+    output_file = os.path.join(DATA_IMAGES_DIR, relative_path)
+    output_dir = os.path.dirname(output_file)
+    os.makedirs(output_dir, exist_ok=True)
+
+    output_file = os.path.splitext(output_file)[0] + ".jpg"
+    return process_image(input_file, output_file)
+
 
 def main():
-    # 1. Charger les annotations
-    
-    load_annotation(CAPTION_FILE)
+    annotations = load_annotation(CAPTION_FILE)
+    if not annotations:
+        print("Aucune annotation trouvée. Fin du script.")
+        return
 
     success_count = 0
-
-    # 2. Traiter chaque entrée
     for item in annotations:
-        relative_path = item.get("image") # Ex: "foot/evobattle-player-0-left-foot-0.png"
-
-        if not relative_path:
-            print("Avertissement : Entrée JSON sans clé 'image'. Ignorée.")
-            continue
-
-        # Chemin complet vers l'image source
-        input_file = os.path.join(ASSETS_DIR, relative_path)
-
-        # Construire le chemin de sortie (on garde le nom mais on change l'extension en .jpg)
-        # On remplace l'extension par .jpg
-        output_filename = os.path.splitext(os.path.basename(relative_path))[0] + ".jpg"
-        output_file = os.path.join(DATA_IMAGES_DIR, output_filename)
-
-        # Traitement
-        if os.path.exists(input_file):
-            if process_image(input_file, output_file):
-                success_count += 1
-        else:
-            print(f"Avertissement : Fichier source non trouvé : {input_file}")
+        if load_item(item):
+            success_count += 1
 
     print("-" * 30)
-    print(f"Traitement terminé. {success_count} images traitées avec succès et sauvegardées dans /data/images/")
+    print(f"Processing complete. {success_count} images successfully processed and saved in /data/images/")
 
 if __name__ == "__main__":
     main()
