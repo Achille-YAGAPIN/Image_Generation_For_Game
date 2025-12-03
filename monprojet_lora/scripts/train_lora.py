@@ -68,7 +68,7 @@ def run_training():
     TRAIN_SCRIPT,
     "--pretrained_model_name_or_path", MODEL_NAME,
     "--train_data_dir", DATASET_DIR, 
-    "--caption_column","image",
+    "--caption_column","prompt",
     "--output_dir", OUTPUT_DIR,
     "--resolution", str(RESOLUTION),
     # "--center_crop", # L'absence de l'argument le laisse à False par défaut (RandomCrop)
