@@ -10,7 +10,7 @@ ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, '..'))
 # Dossiers et Fichiers
 DATASET_DIR = os.path.join(ROOT_DIR, 'preprocessed')
 OUTPUT_DIR = os.path.join(ROOT_DIR, 'models')
-CAPTION_FILE = os.path.join(ROOT_DIR, 'metadata.jsonl')
+CAPTION_FILE = os.path.join(DATASET_DIR, 'metadata.jsonl')
 
 # CHEMIN CORRIGÉ VERS LE SCRIPT D'ENTRAÎNEMENT 
 # (Suppose que vous avez téléchargé 'train_text_to_image_lora.py' dans /scripts/)
