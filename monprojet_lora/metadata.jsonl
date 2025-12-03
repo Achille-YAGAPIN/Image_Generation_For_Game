@@ -1,0 +1,100 @@
+[
+    {"file_name": "foot/evobattle-player-0-left-foot-0.png", "text": "a rabbit left foot"}
+    {"file_name": "foot/evobattle-player-0-right-foot-0.png", "text": "a rabbit right foot"}
+    {"file_name": "foot/evobattle-player-1-left-foot-0.png", "text": "a mouse left foot"}
+    {"file_name": "foot/evobattle-player-1-right-foot-0.png", "text": "a mouse right foot"}
+    {"file_name": "foot/evobattle-player-2-left-foot-0.png", "text": "a squirrel left foot"}
+    {"file_name": "foot/evobattle-player-2-right-foot-0.png", "text": "a squirrel right foot"}
+    {"file_name": "foot/evobattle-player-3-left-foot-0.png", "text": "a chick left foot"}
+    {"file_name": "foot/evobattle-player-3-right-foot-0.png", "text": "a chick right foot"}
+    {"file_name": "foot/evobattle-player-4-left-foot-0.png", "text": "a pig left foot"}
+    {"file_name": "foot/evobattle-player-4-right-foot-0.png", "text": "a pig right foot"}
+    {"file_name": "foot/evobattle-player-5-left-foot-0.png", "text": "a duck left foot"}
+    {"file_name": "foot/evobattle-player-5-right-foot-0.png", "text": "a duck right foot"}
+    {"file_name": "foot/evobattle-player-6-left-foot-0.png", "text": "a mole left foot"}
+    {"file_name": "foot/evobattle-player-6-right-foot-0.png", "text": "a mole right foot"}
+    {"file_name": "foot/evobattle-player-7-left-foot-0.png", "text": "a monkey left foot"}
+    {"file_name": "foot/evobattle-player-7-right-foot-0.png", "text": "a monkey right foot"}
+    {"file_name": "foot/evobattle-player-8-left-foot-0.png", "text": "a sheep left foot"}
+    {"file_name": "foot/evobattle-player-8-right-foot-0.png", "text": "a sheep right foot"}
+    {"file_name": "foot/evobattle-player-9-left-foot-0.png", "text": "a panda left foot"}
+    {"file_name": "foot/evobattle-player-9-right-foot-0.png", "text": "a panda right foot"}
+    {"file_name": "hands/evobattle-player-0-left-hand-0.png", "text": "a rabbit left hand"}
+    {"file_name": "hands/evobattle-player-0-right-hand-0.png", "text": "a rabbit right hand"}
+    {"file_name": "hands/evobattle-player-1-left-hand-0.png", "text": "a mouse left hand"}
+    {"file_name": "hands/evobattle-player-1-right-hand-0.png", "text": "a mouse right hand"}
+    {"file_name": "hands/evobattle-player-2-left-hand-0.png", "text": "a squirrel left hand"}
+    {"file_name": "hands/evobattle-player-2-right-hand-0.png", "text": "a squirrel right hand"}
+    {"file_name": "hands/evobattle-player-3-left-hand-0.png", "text": "a chick left hand"}
+    {"file_name": "hands/evobattle-player-3-right-hand-0.png", "text": "a chick right hand"}
+    {"file_name": "hands/evobattle-player-4-left-hand-0.png", "text": "a pig left hand"}
+    {"file_name": "hands/evobattle-player-4-right-hand-0.png", "text": "a pig right hand"}
+    {"file_name": "hands/evobattle-player-5-left-hand-0.png", "text": "a duck left hand"}
+    {"file_name": "hands/evobattle-player-5-right-hand-0.png", "text": "a duck right hand"}
+    {"file_name": "hands/evobattle-player-6-left-hand-0.png", "text": "a mole left hand"}
+    {"file_name": "hands/evobattle-player-6-right-hand-0.png", "text": "a mole right hand"}
+    {"file_name": "hands/evobattle-player-7-left-hand-0.png", "text": "a monkey left hand"}
+    {"file_name": "hands/evobattle-player-7-right-hand-0.png", "text": "a monkey right hand"}
+    {"file_name": "hands/evobattle-player-8-left-hand-0.png", "text": "a sheep left hand"}
+    {"file_name": "hands/evobattle-player-8-right-hand-0.png", "text": "a sheep right hand"}
+    {"file_name": "hands/evobattle-player-9-left-hand-0.png", "text": "a panda left hand"}
+    {"file_name": "hands/evobattle-player-9-right-hand-0.png", "text": "a panda right hand"}
+    {"file_name": "head/evobattle-player-0-head-0.png", "text": "a rabbit head"}
+    {"file_name": "head/evobattle-player-0-left-ear-0.png", "text": "a rabbit left ear"}
+    {"file_name": "head/evobattle-player-0-right-ear-0.png", "text": "a rabbit right ear"}
+    {"file_name": "head/evobattle-player-1-head-0.png", "text": "a mouse head"}
+    {"file_name": "head/evobattle-player-1-left-ear-0.png", "text": "a mouse left ear"}
+    {"file_name": "head/evobattle-player-1-right-ear-0.png", "text": "a mouse right ear"}
+    {"file_name": "head/evobattle-player-2-head-0.png", "text": "a squirrel head"}
+    {"file_name": "head/evobattle-player-2-left-ear-0.png", "text": "a squirrel left ear"}
+    {"file_name": "head/evobattle-player-2-right-ear-0.png", "text": "a squirrel right ear"}
+    {"file_name": "head/evobattle-player-3-head-0.png", "text": "a chick head"}
+    {"file_name": "head/evobattle-player-4-head-0.png", "text": "a pig head"}
+    {"file_name": "head/evobattle-player-4-left-ear-0.png", "text": "a pig left ear"}
+    {"file_name": "head/evobattle-player-4-right-ear-0.png", "text": "a pig right ear"}
+    {"file_name": "head/evobattle-player-5-head-0.png", "text": "a duck head"}
+    {"file_name": "head/evobattle-player-6-head-0.png", "text": "a mole head"}
+    {"file_name": "head/evobattle-player-6-left-ear-0.png", "text": "a mole left ear"}
+    {"file_name": "head/evobattle-player-6-right-ear-0.png", "text": "a mole right ear"}
+    {"file_name": "head/evobattle-player-7-head-0.png", "text": "a monkey head"}
+    {"file_name": "head/evobattle-player-7-left-ear-0.png", "text": "a monkey left ear"}
+    {"file_name": "head/evobattle-player-7-right-ear-0.png", "text": "a monkey right ear"}
+    {"file_name": "head/evobattle-player-8-head-0.png", "text": "a sheep head"}
+    {"file_name": "head/evobattle-player-8-left-ear-0.png", "text": "a sheep left ear"}
+    {"file_name": "head/evobattle-player-8-right-ear-0.png", "text": "a sheep right ear"}
+    {"file_name": "head/evobattle-player-9-head-0.png", "text": "a panda head"}
+    {"file_name": "head/evobattle-player-9-left-ear-0.png", "text": "a panda left ear"}
+    {"file_name": "head/evobattle-player-9-right-ear-0.png", "text": "a panda right ear"}
+    {"file_name": "hat/evobattle-player-0-hat-0.png","text": "an iron helmet"}
+    {"file_name": "hat/evobattle-player-0-hat-0-0.png","text": "an iron helmet left horn"}
+    {"file_name": "hat/evobattle-player-0-hat-0-1.png","text": "an iron helmet right horn"}
+    {"file_name": "hat/evobattle-player-1-hat-0.png","text": "a bronze helmet"}
+    {"file_name": "hat/evobattle-player-1-hat-0-0.png","text": "an bronze helmet left horn"}
+    {"file_name": "hat/evobattle-player-1-hat-0-1.png","text": "an bronze helmet right horn"}
+    {"file_name": "hat/evobattle-player-2-hat-0.png","text": "a wooden mask"}
+    {"file_name": "hat/evobattle-player-3-hat-0.png","text": "an eggshell hat"}
+    {"file_name": "hat/evobattle-player-4-hat-0.png","text": "a red and yellow chinese cap"}
+    {"file_name": "hat/evobattle-player-4-hat-0-0.png","text": "a chinese cap tail"}
+    {"file_name": "hat/evobattle-player-5-hat-0.png","text": "a leaf mask"}
+    {"file_name": "hat/evobattle-player-6-hat-0.png","text": "a yellow hard hat"}
+    {"file_name": "hat/evobattle-player-7-hat-0.png","text": "a banana crown"}
+    {"file_name": "hat/evobattle-player-8-hat-0.png","text": "a white hood"}
+    {"file_name": "hat/evobattle-player-9-hat-0.png","text": "a conical Asian hat"}
+    {"file_name": "tail/evobattle-player-0-tail-0.png","text": "a rabbit tail"}
+    {"file_name": "tail/evobattle-player-1-tail-0.png","text": "a mouse tail"}
+    {"file_name": "tail/evobattle-player-2-tail-0.png","text": "a squirrel tail"}
+    {"file_name": "tail/evobattle-player-4-tail-0.png","text": "a pig tail"}
+    {"file_name": "tail/evobattle-player-5-tail-0.png","text": "a duck tail"}
+    {"file_name": "tail/evobattle-player-6-tail-0.png","text": "a beaver tail"}
+    {"file_name": "tail/evobattle-player-7-tail-0.png","text": "a monkey tail"}
+    {"file_name": "weapon/evobattle-weapon-0-0.png","text": "a carrot weapon"}
+    {"file_name": "weapon/evobattle-weapon-1-0.png","text": "a cheese weapon"}
+    {"file_name": "weapon/evobattle-weapon-2-0.png","text": "a acorn weapon"}
+    {"file_name": "weapon/evobattle-weapon-3-0.png","text": "a eggshell weapon"}
+    {"file_name": "weapon/evobattle-weapon-4-0.png","text": "chopsticks weapon"}
+    {"file_name": "weapon/evobattle-weapon-5-0.png","text": "a leek weapon"}
+    {"file_name": "weapon/evobattle-weapon-6-0.png","text": "a wooden stick weapon"}
+    {"file_name": "weapon/evobattle-weapon-7-0.png","text": "a banana weapon"}
+    {"file_name": "weapon/evobattle-weapon-8-0.png","text": "a ax weapon"}
+    {"file_name": "weapon/evobattle-weapon-9-0.png","text": "a bamboo weapon"}
+]
