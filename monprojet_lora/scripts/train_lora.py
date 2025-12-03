@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, '..'))
 
 # Dossiers et Fichiers
-DATASET_DIR = os.path.join(ROOT_DIR, 'data', 'images')
+DATASET_DIR = os.path.join(ROOT_DIR, 'preprocessed')
 OUTPUT_DIR = os.path.join(ROOT_DIR, 'models')
 CAPTION_FILE = os.path.join(ROOT_DIR, 'metadata.jsonl')
 
